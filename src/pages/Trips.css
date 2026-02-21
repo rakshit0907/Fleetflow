@@ -1,0 +1,35 @@
+.route-cell {
+    font-size: 0.85rem;
+}
+
+.route-arrow {
+    color: var(--accent-light);
+    margin: 0 6px;
+    font-weight: 700;
+}
+
+.plate-code {
+    color: var(--accent-light);
+    background: var(--bg-input);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-family: 'SF Mono', 'Consolas', monospace;
+}
+
+.action-btns {
+    display: flex;
+    gap: 4px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+@media (max-width: 480px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}

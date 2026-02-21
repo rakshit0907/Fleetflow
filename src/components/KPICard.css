@@ -1,0 +1,107 @@
+.kpi-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.kpi-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    border-radius: 4px 0 0 4px;
+}
+
+.kpi-accent::before {
+    background: var(--accent-gradient);
+}
+
+.kpi-success::before {
+    background: var(--success);
+}
+
+.kpi-warning::before {
+    background: var(--warning);
+}
+
+.kpi-danger::before {
+    background: var(--danger);
+}
+
+.kpi-info::before {
+    background: var(--info);
+}
+
+.kpi-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.kpi-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-md);
+    flex-shrink: 0;
+}
+
+.kpi-accent .kpi-icon {
+    background: var(--accent-glow);
+    color: var(--accent-light);
+}
+
+.kpi-success .kpi-icon {
+    background: var(--success-bg);
+    color: var(--success);
+}
+
+.kpi-warning .kpi-icon {
+    background: var(--warning-bg);
+    color: var(--warning);
+}
+
+.kpi-danger .kpi-icon {
+    background: var(--danger-bg);
+    color: var(--danger);
+}
+
+.kpi-info .kpi-icon {
+    background: var(--info-bg);
+    color: var(--info);
+}
+
+.kpi-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.kpi-value {
+    font-size: 1.75rem;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.kpi-label {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    margin-top: 2px;
+}
+
+.kpi-subtitle {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    margin-top: 2px;
+}

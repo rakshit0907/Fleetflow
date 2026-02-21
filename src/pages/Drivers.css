@@ -1,0 +1,149 @@
+.drivers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 16px;
+}
+
+.driver-card {
+    padding: 20px;
+    transition: var(--transition);
+}
+
+.driver-card:hover {
+    border-color: var(--border-hover);
+}
+
+.expired-card {
+    border-color: rgba(239, 68, 68, 0.3) !important;
+}
+
+.driver-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.driver-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--accent-gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.driver-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.driver-info h3 {
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+.driver-actions-top {
+    display: flex;
+    gap: 4px;
+}
+
+.driver-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.stat {
+    padding: 8px;
+    background: var(--bg-input);
+    border-radius: var(--radius-sm);
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-muted);
+    margin-bottom: 2px;
+}
+
+.stat-value {
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.text-danger {
+    color: var(--danger) !important;
+}
+
+.score-bar {
+    height: 4px;
+    background: var(--bg-tertiary);
+    border-radius: 2px;
+    margin: 4px 0;
+    overflow: hidden;
+}
+
+.score-fill {
+    height: 100%;
+    border-radius: 2px;
+    transition: width 0.5s ease;
+}
+
+.driver-status-actions {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.category-toggles {
+    display: flex;
+    gap: 8px;
+}
+
+.cat-toggle {
+    padding: 6px 16px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    background: var(--bg-input);
+    color: var(--text-secondary);
+    font-family: inherit;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.cat-toggle.active {
+    background: var(--accent-glow);
+    border-color: var(--accent);
+    color: var(--accent-light);
+    font-weight: 600;
+}
+
+.cat-toggle:hover {
+    border-color: var(--border-hover);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+@media (max-width: 480px) {
+    .drivers-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .driver-stats {
+        grid-template-columns: 1fr;
+    }
+}
